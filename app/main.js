@@ -22,15 +22,15 @@ import mockData from "./data.json";
 let filterData = [];
 let user = [
   {
-    name_account: "Jaime",
-    account_link: "jaimeglez",
-    upload_time: "10:06 PM",
-    tweet_text: "",
+    name_account: "Cyph",
+    account_link: "cyph",
+    upload_time: "01:43 PM PM",
+    tweet_text: "Esto es una prueba de tweet",
     media: "",
-    comments: 0,
-    likes: 0,
-    retweet: 0,
-    pic: "https://pbs.twimg.com/profile_images/1472171491009744898/wTS3WE8S_400x400.jpg",
+    comments: 1,
+    likes: 4,
+    retweet: 8,
+    pic: "https://pbs.twimg.com/profile_images/1213805716554866689/plK9hxg8_400x400.jpg",
   },
 ];
 
@@ -147,15 +147,15 @@ const initTweetEvent = () => {
     if (isButtonActive) {
       console.log("has hecho click");
       mockData.unshift({
-        name_account: "Jaime",
-        account_link: "jaimeglez",
+        name_account: "Cyph",
+        account_link: "Cyphrah",
         upload_time: "5:09 PM",
         tweet_text: tweetInputString.value,
         media: "",
         comments: "",
-        likes: 0,
-        retweet: 0,
-        pic: "https://pbs.twimg.com/profile_images/1472171491009744898/wTS3WE8S_400x400.jpg",
+        likes: 2,
+        retweet: 4,
+        pic: "https://pbs.twimg.com/profile_images/1213805716554866689/plK9hxg8_400x400.jpg",
       });
       renderTweetString();
       tweetInputString.value = "";

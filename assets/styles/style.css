@@ -13,7 +13,7 @@ body {
   font-size: 1rem;
   line-height: 1.5rem;
   color: white;
-  @apply bg-black;
+  @apply bg-[rgba(31,37,47)];
   min-height: 100vh;
   font-family: $font_family_base;
 }
@@ -27,7 +27,7 @@ body {
     @apply flex;
     .feed {
       .home {
-        @apply flex justify-between items-center pr-4 pl-4; 
+        @apply flex justify-between items-center px-4 mt-4 ; 
         span{
           @apply flex justify-between items-center;
           @apply text-xl font-bold;
