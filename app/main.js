@@ -14,7 +14,6 @@ import mockData from "./data.json";
 //);
 //
 //const searchInput = document.querySelector(".tweet_text input");
-//
 //console.log(moreThan3Rt);
 //console.log(moreThan50Likes);
 //console.log(moreThan10Char);
