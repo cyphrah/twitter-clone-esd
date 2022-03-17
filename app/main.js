@@ -10,6 +10,7 @@ import mockData from "./data.json";
 //const moreThan50Likes = mockData.filter((num) => num.likes > 50);
 //
 //const moreThan10Char = mockData.filter(
+//
 //  (caracteres) => caracteres.tweet_text.split(" ").length >= 15
 //);
 //
