@@ -10,11 +10,11 @@ import mockData from "./data.json";
 //const moreThan50Likes = mockData.filter((num) => num.likes > 50);
 //
 //const moreThan10Char = mockData.filter(
-//
 //  (caracteres) => caracteres.tweet_text.split(" ").length >= 15
 //);
 //
 //const searchInput = document.querySelector(".tweet_text input");
+
 //console.log(moreThan3Rt);
 //console.log(moreThan50Likes);
 //console.log(moreThan10Char);
@@ -22,15 +22,15 @@ import mockData from "./data.json";
 let filterData = [];
 let user = [
   {
-    name_account: "Cyph",
-    account_link: "cyph",
-    upload_time: "01:43 PM PM",
-    tweet_text: "Esto es una prueba de tweet",
+    name_account: "Jaime",
+    account_link: "jaimeglez",
+    upload_time: "10:06 PM",
+    tweet_text: "",
     media: "",
-    comments: 1,
-    likes: 4,
-    retweet: 8,
-    pic: "https://pbs.twimg.com/profile_images/1213805716554866689/plK9hxg8_400x400.jpg",
+    comments: 0,
+    likes: 0,
+    retweet: 0,
+    pic: "https://pbs.twimg.com/profile_images/1472171491009744898/wTS3WE8S_400x400.jpg",
   },
 ];
 
@@ -147,15 +147,15 @@ const initTweetEvent = () => {
     if (isButtonActive) {
       console.log("has hecho click");
       mockData.unshift({
-        name_account: "Cyph",
-        account_link: "Cyphrah",
+        name_account: "Jaime",
+        account_link: "jaimeglez",
         upload_time: "5:09 PM",
         tweet_text: tweetInputString.value,
         media: "",
         comments: "",
-        likes: 2,
-        retweet: 4,
-        pic: "https://pbs.twimg.com/profile_images/1213805716554866689/plK9hxg8_400x400.jpg",
+        likes: 0,
+        retweet: 0,
+        pic: "https://pbs.twimg.com/profile_images/1472171491009744898/wTS3WE8S_400x400.jpg",
       });
       renderTweetString();
       tweetInputString.value = "";
@@ -285,6 +285,8 @@ const renderTweetString = (data = mockData) => {
 
 
 
+
+
 const searchInput = document.querySelector(".searchbar_input input");
 
 const initSearchEvents = () => {
@@ -296,9 +298,27 @@ const initSearchEvents = () => {
         filterData = mockData.filter((d) => {
           return d.tweet_text.includes(searchInputValue);
         });
-        if(filter){
+        if(filterData.length > 0){
           renderTweetString(filterData);
-
+        }else{
+          const renderError = () => {
+            const feedBlock = document.querySelector(".tweet_strings");
+            let tweetString = "";
+              tweetString += `
+              <div class="error_message">
+              <h1>No results for "${searchInputValue}"</h1>
+              <span>
+                The term you entered did not bring up any results. You may have
+                mistyped your term or your Search settings could be protecting
+                you from some potentially sensitive content.
+                </span>
+            </div>
+                        `;
+          
+              feedBlock.innerHTML = tweetString;
+          };
+          
+          renderError();
         }
     } else {
       renderTweetString();
