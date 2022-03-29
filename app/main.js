@@ -131,6 +131,7 @@ window.addEventListener("load", () => {
   initSearchEvents();
   initNewTweetEvents();
   renderTweetString();
+  showCounter();
 });
 
 let isButtonActive = false;
@@ -172,11 +173,11 @@ const turnTweetOn = () => {
   isButtonActive = true;
 };
 
-const turnTweetOff = () => {
-  //desactivar boton
-  tweetButton.classList.add("desactivated");
-  isButtonActive = false;
-};
+// const turnTweetOff = () => {
+//   //desactivar boton
+//   tweetButton.classList.add("desactivated");
+//   isButtonActive = false;
+// };
 
 const showCounter = () => {
   const counterBlock = document.querySelector(".counter");
