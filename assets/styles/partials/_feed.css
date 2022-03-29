@@ -40,35 +40,15 @@
           }
         }
         .button_holder {
-          @apply flex items-center justify-center ;
+          @apply flex items-center justify-center;
             .counter_holder{
                 @apply flex items-center justify-center relative;
-                @apply mr-4;
-                svg {
-                    @apply w-[40px] h-[40px];
-                    @apply flex justify-center items-center;
-        
-                    circle{
-                        @apply stroke-[3px] translate-x-1 translate-y-1;
-                        stroke-dashoffset: 100;
-                        stroke-dasharray: 100;
-                    }
-        
-                    circle:nth-child(1) {
-                      stroke-dashoffset: 0;
-                      @apply stroke-gray-200 opacity-20;
-                    }
-                    circle:nth-child(2) {
-                      stroke-dashoffset: 70;
-                      @apply stroke-blue-500;
-                    }
-                  }
+                @apply mr-7;
                   .counter {
                     @apply text-sm;
                     @apply absolute top-0 left-0;
                     @apply flex items-center justify-center;
                     @apply w-full h-full;
-
                     &.pass{
                         @apply text-red-500;
                     }

@@ -22,15 +22,15 @@ import mockData from "./data.json";
 let filterData = [];
 let user = [
   {
-    name_account: "Jaime",
-    account_link: "jaimeglez",
+    name_account: "Cyph",
+    account_link: "cyph",
     upload_time: "10:06 PM",
     tweet_text: "",
     media: "",
     comments: 0,
-    likes: 0,
     retweet: 0,
-    pic: "https://pbs.twimg.com/profile_images/1472171491009744898/wTS3WE8S_400x400.jpg",
+    likes: 0,
+    pic: "https://pbs.twimg.com/profile_images/1213805716554866689/plK9hxg8_400x400.jpg",
   },
 ];
 
@@ -145,17 +145,17 @@ const tweetButton = document.querySelector(".tweet_button");
 const initTweetEvent = () => {
   tweetButton.addEventListener("click", () => {
     if (isButtonActive) {
-      console.log("has hecho click");
+      console.log("click, click");
       mockData.unshift({
-        name_account: "Jaime",
-        account_link: "jaimeglez",
-        upload_time: "5:09 PM",
+        name_account: "Cyph",
+        account_link: "cyph",
+        upload_time: "13:37 PM",
         tweet_text: tweetInputString.value,
         media: "",
         comments: "",
-        likes: 0,
         retweet: 0,
-        pic: "https://pbs.twimg.com/profile_images/1472171491009744898/wTS3WE8S_400x400.jpg",
+        likes: 0,
+        pic: "https://pbs.twimg.com/profile_images/1213805716554866689/plK9hxg8_400x400.jpg",
       });
       renderTweetString();
       tweetInputString.value = "";
@@ -187,7 +187,7 @@ const showCounter = () => {
 
   counterBlock.innerHTML = counterNum;
 
-  if (tweetInputValue.length < 140) {
+  if (tweetInputValue.length <= 140) {
     counterBlock.classList.remove("pass");
     turnTweetOn();
   } else {
@@ -196,30 +196,22 @@ const showCounter = () => {
   }
 };
 
-const hideCounter = () => {
-  const counterBlock = document.querySelector(".counter");
-  let counterNum = "";
-  counterNum = `
-        <span></span>
-              `;
+// const hideCounter = () => {
+//   const counterBlock = document.querySelector(".counter");
+//   let counterNum = "";
+//   counterNum = `
+//         <span></span>
+//               `;
 
-  counterBlock.innerHTML = counterNum;
-};
-
-const renderBorder = () => {
-  const progressBar = document.querySelector(".progress_bar");
-  console.log(progressBar);
-  progressBar.style.background = "red";
-};
-
-renderBorder();
+//   counterBlock.innerHTML = counterNum;
+// };
 
 const checkNewTweetLength = () => {
   if (tweetInputValue.length == 0) {
-    hideCounter();
+    showCounter();
     turnTweetOff();
   } else if (tweetInputValue.length > 0 && tweetInputValue.length < 120) {
-    hideCounter();
+    showCounter();
     turnTweetOn();
   } else {
     showCounter();
@@ -265,12 +257,12 @@ const renderTweetString = (data = mockData) => {
           <div class="interact">
             <div class="comment">
               <img src="assets/images/Vector-11.svg" alt="" /><span>${data[i].comments}</span>
+            </div>  
+            <div class="retweet">
+              <img src="assets/images/Vector-12.svg" alt="" /><span>${data[i].retweet}</span>
             </div>
             <div class="fav">
               <img src="assets/images/Vector-13.svg" alt="" /><span>${data[i].likes}</span>
-            </div>
-            <div class="retweet">
-              <img src="assets/images/Vector-12.svg" alt="" /><span>${data[i].retweet}</span>
             </div>
             <div class="share"><i class="ph-export"></i></div>
           </div>

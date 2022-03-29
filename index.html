@@ -7,7 +7,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=no"
     />
-    <title>vitejs_boiler</title>
+    <title>Twatter</title>
   </head>
   <body>
     <div class="twitter">
@@ -21,57 +21,64 @@
               <div class="icon_holder">
                 <img src="assets/images/Vector.svg" alt="" />
               </div>
-              <span>Home</span>
+              <span class="selected">Inicio</span>
             </li>
             <li class="menu_item">
               <div class="icon_holder">
                 <img src="assets/images/Vector-1.svg" alt="" />
               </div>
-              <span>Explore</span>
+              <span class="not-selected">Explorar</span>
             </li>
             <li class="menu_item">
               <div class="icon_holder">
                 <img src="assets/images/Vector-2.svg" alt="" />
               </div>
-              <span>Notifications</span>
+              <span class="not-selected">Notificaciones</span>
             </li>
             <li class="menu_item">
               <div class="icon_holder">
                 <img src="assets/images/Vector-3.svg" alt="" />
               </div>
-              <span>Messages</span>
+              <span class="not-selected">Mensajes</span>
             </li>
             <li class="menu_item">
-              <div class="icon_holder"><i class="ph-bookmark-simple"></i></div>
-              <span>Bookmarks</span>
+              <div class="icon_holder">
+                <img src="./assets/images/Saved-SVG.svg" alt="" />
+              </div>
+              <span class="not-selected">Guardados</span>
             </li>
             <li class="menu_item">
-              <div class="icon_holder"><i class="ph-list"></i></div>
-              <span>Lists</span>
+              <div class="icon_holder">
+                <img src="assets/images/Lists-SVG.svg" alt="" />
+              </div>
+              <span class="not-selected">Listas</span>
             </li>
             <li class="menu_item">
               <div class="icon_holder">
                 <img src="assets/images/Vector-5.svg" alt="" />
               </div>
-              <span>Profile</span>
+              <span class="not-selected">Perfil</span>
             </li>
             <li class="menu_item">
               <div class="icon_holder">
-                <i class="ph-dots-three-circle"></i>
+                <img src="assets/images/More-SVG.svg" alt="" />
               </div>
-              <span>More</span>
+              <span class="not-selected">Más opciones</span>
             </li>
           </ul>
           <div class="menu_tweet_button"><span>Tweet</span></div>
         </div>
         <div class="profile">
           <div class="prof_pic">
-            <img src="assets/images/profile.jpg" alt="" />
+            <img
+              src="https://pbs.twimg.com/profile_images/1213805716554866689/plK9hxg8_400x400.jpg"
+              alt=""
+            />
           </div>
           <div class="profile_metadata">
             <div class="prof_info">
-              <div class="profile_name">Jaime González</div>
-              <div class="profile_link">@jaimeglez</div>
+              <div class="profile_name">Cyph</div>
+              <div class="profile_link">@cyph</div>
             </div>
             <div class="profile_options">
               <i class="ph-dots-three-bold"></i>
@@ -82,15 +89,19 @@
       <div class="content_block">
         <div class="feed">
           <div class="home">
-            <span>Home</span><img src="assets/images/estrellitas.svg" alt="" />
+            <span>Inicio</span
+            ><img src="assets/images/estrellitas.svg" alt="" />
           </div>
           <div class="tweet">
             <div class="profile_pic">
-              <img src="assets/images/profile.jpg" alt="" />
+              <img
+                src="https://pbs.twimg.com/profile_images/1213805716554866689/plK9hxg8_400x400.jpg"
+                alt=""
+              />
             </div>
             <div class="tweet_content">
               <div class="tweet_input">
-                <textarea placeholder="What's happening?"></textarea>
+                <textarea placeholder="¿Qué está pasando?"></textarea>
               </div>
               <div class="media_button">
                 <div class="meta_buttons">
@@ -98,18 +109,12 @@
                     <i class="ph-image-square-bold"></i>
                   </div>
                   <div class="select_gif"><i class="ph-gif-bold"></i></div>
+                  <div class="create-poll">
+                    <img src="./assets/images/Create-Poll.svg" alt="" />
+                  </div>
                 </div>
                 <div class="button_holder">
                   <div class="counter_holder">
-                    <svg>
-                      <circle cx="15" cy="15" r="15"></circle>
-                      <circle
-                        class="progress_bar"
-                        cx="15"
-                        cy="15"
-                        r="15"
-                      ></circle>
-                    </svg>
                     <div class="counter"></div>
                   </div>
                   <div class="tweet_button desactivated">
@@ -121,7 +126,7 @@
           </div>
           <div class="tweet_strings">
             <div class="error_message">
-              <h1>No results for</h1>
+              <h1>Couldn't find any results</h1>
               <span
                 >The term you entered did not bring up any results. You may have
                 mistyped your term or your Search settings could be protecting
@@ -141,33 +146,15 @@
           </div>
           <div class="trending">
             <h1>Trending</h1>
-            <ul class="trending_topics">
-              <li class="trending_topic">
-                <img src="assets/images/Vector-1.svg" alt="" /><span
-                  >term 01</span
-                >
-              </li>
-              <li class="trending_topic">
-                <img src="assets/images/Vector-1.svg" alt="" /><span
-                  >term 02</span
-                >
-              </li>
-              <li class="trending_topic">
-                <img src="assets/images/Vector-1.svg" alt="" /><span
-                  >term 03</span
-                >
-              </li>
-              <li class="trending_topic">
-                <img src="assets/images/Vector-1.svg" alt="" /><span
-                  >term 04</span
-                >
-              </li>
-              <li class="trending_topic">
-                <img src="assets/images/Vector-1.svg" alt="" /><span
-                  >term 05</span
-                >
-              </li>
-            </ul>
+            <div class="trending_container">
+              <ul class="trending_topics">
+                <li class="trending_topic">
+                  <p>Guerra en Ucrania</p>
+                  <h3>Rusia y Ucrania inician negociaciones</h3>
+                  <p>Rusia decide reunirse con ucrania blablablablablablablablablabla</p>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

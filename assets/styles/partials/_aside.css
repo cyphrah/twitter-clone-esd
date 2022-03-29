@@ -1,0 +1,38 @@
+.trend_block {
+  @apply min-w-[400px];
+  .searchbar {
+    @apply flex items-center;
+    @apply bg-gray-800 rounded-full mx-4 mt-4;
+    .search_icon {
+      @apply pl-4;
+    }
+    .searchbar_input {
+      @apply p-2;
+      input {
+        @apply bg-transparent outline-none;
+      }
+    }
+  }
+  .trending {
+    @apply bg-gray-800 h-fit rounded-xl m-4;
+    h1 {
+      @apply px-4 pt-4;
+      @apply text-xl font-bold;
+    }
+    .trending_container {
+      @apply pb-1;
+      .trending_topics {
+        @apply py-4;
+        .trending_topic {
+          @apply flex flex-col px-4;
+          p {
+            @apply text-xs text-gray-400;
+          }
+          h3 {
+            @apply font-bold text-lg;
+          }
+        }
+      }
+    }
+  }
+}

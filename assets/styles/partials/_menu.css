@@ -7,8 +7,14 @@
     }
     .menu_items {
       .menu_item {
-        @apply flex items-center;
-        @apply pt-4 pl-4;
+        @apply flex justify-start;
+        @apply pt-3 pl-4;
+        .selected {
+          @apply font-bold;
+        }
+        .not-selected {
+          @apply font-extralight;
+        }
         .icon_holder {
           @apply flex justify-center items-center w-8 mr-4;
           img {
