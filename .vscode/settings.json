@@ -3,5 +3,7 @@
     "*.sass": "sass", 
     "*.scss": "scss", 
     "*.css": "scss", 
-  }
+  },
+  "css.lint.unknownAtRules": "ignore", 
+  "scss.lint.unknownAtRules": "ignore"
 }
