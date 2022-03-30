@@ -28,15 +28,14 @@
         @apply flex justify-between items-center;
         .meta_buttons {
           @apply flex justify-center items-center;
-          .select_image {
-            @apply flex items-center justify-center;
-            @apply m-2;
-          }
           .select_gif {
-            border: 2px solid gray;
-            padding-left: 1px;
-            padding-right: 1px;
+            border: 1px solid gray;
+            @apply px-[2px] py-[1px];
             @apply rounded-md flex items-center justify-center;
+          }
+          .multimedia_icon {
+            @apply flex items-center justify-center;
+            @apply mr-2;
           }
         }
         .button_holder {
@@ -110,7 +109,7 @@
           }
           .dot_icon {
             @apply mr-2;
-            @apply text-sm font-thin text-gray-500;
+            @apply text-sm font-semibold text-gray-500;
           }
           .tweet_time {
             @apply text-sm font-thin text-gray-500;
@@ -123,7 +122,7 @@
         }
         .tweet_media {
           img {
-            @apply rounded-3xl max-w-full mb-6 mt-3;
+            @apply rounded-3xl max-w-full w-full mb-4 mt-3;
           }
         }
         .interact {

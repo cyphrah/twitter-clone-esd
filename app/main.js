@@ -246,7 +246,7 @@ const renderTweetString = (data = mockData) => {
           <div class="user_name">${data[i].name_account}</div>
           <div class="user_link">@${data[i].account_link}</div>
           <div class="dot_icon"><span>·</span></div>
-          <div class="tweet_time">12 min</div>
+          <div class="tweet_time">1 h</div>
         </div>
         <div class="tweet_content">
           <div class="tweet_info">
