@@ -62,7 +62,7 @@
     "tweet_text": "Me acabo de cagar encima",
     "media": "https://pbs.twimg.com/media/FLZVEt5WYAIrbIP?format=jpg&name=medium",
     "comments": "",
-    "retweet": "",
+    "retweet": 1,
     "likes": 9,
     "pic":"https://pbs.twimg.com/profile_images/1506010118432903169/ulJhytcj_400x400.jpg"
   }
